@@ -45,6 +45,7 @@ if (isNeedMigration) {
         [[UIApplication sharedApplication] endBackgroundTask:bgTask];
         bgTask = UIBackgroundTaskInvalid;
         [NSThread sleepForTimeInterval:0.5];
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
     });
 }
 ```
