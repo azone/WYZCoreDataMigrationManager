@@ -8,12 +8,12 @@
 
 #import "NSManagedObjectModel+WYZAdditions.h"
 
-static char kHJMModelContentURLKey;
+static char kWYZModelContentURLKey;
 
 @implementation NSManagedObjectModel (WYZAdditions)
 
 - (NSURL *)wyz_contentURL {
-    NSURL *url = objc_getAssociatedObject(self, &kHJMModelContentURLKey);
+    NSURL *url = objc_getAssociatedObject(self, &kWYZModelContentURLKey);
     if (!url) {
         NSArray *momdArray = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"momd" subdirectory:nil];
         for (NSString *momdPath in momdArray) {
@@ -32,7 +32,7 @@ static char kHJMModelContentURLKey;
 }
 
 - (void)setWyz_contentURL:(NSURL *)wyz_contentURL {
-    objc_setAssociatedObject(self, &kHJMModelContentURLKey, wyz_contentURL, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kWYZModelContentURLKey, wyz_contentURL, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (NSString *)wyz_modelName {

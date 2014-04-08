@@ -8,12 +8,12 @@
 
 #import "NSMappingModel+WYZAdditions.h"
 
-static char kHJMMappingContentURLKey;
+static char kWYZMappingContentURLKey;
 
 @implementation NSMappingModel (WYZAdditions)
 
 - (NSURL *)wyz_contentURL {
-    NSURL *url = objc_getAssociatedObject(self, &kHJMMappingContentURLKey);
+    NSURL *url = objc_getAssociatedObject(self, &kWYZMappingContentURLKey);
     if (!url) {
         NSArray *mappingURLs = [[NSBundle mainBundle] URLsForResourcesWithExtension:@"cdm" subdirectory:nil];
         NSMappingModel *mappingModel;
@@ -30,7 +30,7 @@ static char kHJMMappingContentURLKey;
 }
 
 - (void)setWyz_contentURL:(NSURL *)wyz_contentURL {
-    objc_setAssociatedObject(self, &kHJMMappingContentURLKey, wyz_contentURL, OBJC_ASSOCIATION_COPY_NONATOMIC);
+    objc_setAssociatedObject(self, &kWYZMappingContentURLKey, wyz_contentURL, OBJC_ASSOCIATION_COPY_NONATOMIC);
 }
 
 - (NSString *)wyz_mappingName {
