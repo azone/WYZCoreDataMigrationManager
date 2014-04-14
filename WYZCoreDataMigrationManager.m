@@ -75,6 +75,9 @@
                                            destinationType:self.type
                                         destinationOptions:options
                                                      error:error];
+        if (!isMigrated) {
+            break;
+        }
     }
     [migrationManager removeObserver:self forKeyPath:@"migrationProgress" context:NULL];
 
