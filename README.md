@@ -1,7 +1,7 @@
 WYZCoreDataMigrationManager
 ===========================
 
-前一段时间遇到了一些Core Data数据迁移方面的问题，学到了不少东西。于是就总结了一下写了一个Core Data数据迁移的类，也写了一篇博客[如何运用更聪明的办法进行Core Data数据迁移](http://firestudio.cn/blog/2014/04/04/how-to-make-core-data-migration-smarter/)，希望能帮助那些对Core Data数据库迁移有疑问的同志们少走一些弯路吧。
+前一段时间遇到了一些Core Data数据迁移方面的问题，学到了不少东西。于是就总结了一下写了一个Core Data数据迁移的类，也写了一篇博客[如何运用更聪明的办法进行Core Data数据迁移](http://firestudio.dev/blog/2014/04/04/how-to-make-core-data-migration-smarter/)，希望能帮助那些对Core Data数据库迁移有疑问的同志们少走一些弯路吧。
 
 ## 使用方法
 
